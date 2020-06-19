@@ -1,0 +1,787 @@
+/* 
+* Project Name : Designer Country
+* Project Author : Nayeem Khan 
+* Project Start Date : 29.01.2020
+* All Section 
+*   1. Base Css
+*/
+/* ============> **Base Css Start** <============ */
+/* ===============> **Font-Family Css Start** <==============*/
+@import url("https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Signika&display=swap");
+
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Signika', sans-serif; */
+/* * body{ 
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-family: 'Montserrat', sans-serif;
+  -moz-font-family: 'Montserrat', sans-serif;
+  -ms-font-family: 'Montserrat', sans-serif;
+} */
+/*
+/* ===============> **Font-Family Css End** <==============*/
+/* ============> **Custom Css Start** <============ */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.remove-all-margin-padding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-font-family: "Josefin Sans", sans-serif;
+    -moz-font-family: "Josefin Sans", sans-serif;
+    -ms-font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.7rem;
+    font-size: 18px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.custom_button {
+    padding: 60px 0px;
+}
+
+.custom_button a {
+    background-color: #009b97;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 60px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.custom_button a:hover {
+    background-color: #007571;
+    color: #ffffff;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.custom-select.is-invalid:focus,
+.form-control.is-invalid:focus,
+.was-validated .custom-select:invalid:focus,
+.was-validated .form-control:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+}
+
+.submit {
+    background-color: #009b97;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 60px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: #007571;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+hr {
+    border: 1px solid #19beb9;
+}
+
+.form-control {
+    line-height: 2rem;
+    border: 2px solid #CED4DA;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out, black .15s ease-in-out;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid #19BEB9;
+}
+
+/*=========> Checkbox Customize Css <===========*/
+/* The container */
+.check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #CED4DA;
+    border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+/* .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  } */
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked~.checkmark {
+    background-color: #19BEB9;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+    left: 7px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*=========> Checkbox Customize Css <===========*/
+
+/* ============> **Custom End** <============ */
+/* ============> **Header Css Start** <============ */
+#header {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #283e4b;
+    top: 0;
+    z-index: 20;
+    padding: 6px 0px;
+}
+
+#header .dropdown-menu {
+    width: 250px;
+    margin-left: -100px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#header .menu {
+    background-color: #283e4b;
+}
+
+#header .navbar .nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header ul .dropdown-menu {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+#header ul .dropdown-menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#header ul .dropdown-menu a:hover {
+    color: rgb(148, 148, 148);
+}
+
+.nav-item a:hover {
+    color: #19beb9 !important;
+}
+
+.account-section a:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.navbar {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid rgb(187, 186, 186);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: white;
+}
+
+#header .account-section {
+    width: 110px;
+    margin-left: -84px;
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+/* ============> **Header Css End** <============ */
+/* ============> **Banner and Around Css start** <============ */
+#banner h1 {
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-font-family: "Josefin Sans", sans-serif;
+    -moz-font-family: "Josefin Sans", sans-serif;
+    -ms-font-family: "Josefin Sans", sans-serif;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#around img {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#howWork i {
+    font-size: 50px;
+    color: #19beb9;
+}
+
+/* ============> **Banner and Around Css End** <============ */
+/* ============> **Design Sample and About Css Section Start ** <============ */
+#design_sample img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+
+#about_bg {
+    background-image: url(../img/Designer-Country-Photo-Editing-Company.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 400px;
+}
+
+#about_bg .about-title {
+    padding-top: 400px;
+}
+
+#about_article i {
+    padding: 20px;
+    color: #19beb9;
+    /* border: 1px solid #a0ce4e; */
+    font-size: 50px;
+    border-radius: 50%;
+}
+
+#latest_product a {
+    color: black;
+}
+
+.owl-nav span {
+    display: none;
+}
+
+/* ============> **Design Sample and About Css Section Start ** <============ */
+/* ============> **Tag Section Start ** <============ */
+#tag a {
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+    font-size: 14px;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 10px;
+    grid-gap: 5px;
+}
+
+.grid-itema {
+    border: 1px solid rgba(190, 190, 190, 0.8);
+    padding: 6px 0px;
+    text-align: center;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 10px;
+    grid-gap: 5px;
+}
+
+.grid-itemb {
+    border: 1px solid rgba(190, 190, 190, 0.8);
+    padding: 6px 0px;
+    text-align: center;
+}
+
+.grid-container3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 10px;
+    grid-gap: 5px;
+}
+
+.grid-itemc {
+    border: 1px solid rgba(190, 190, 190, 0.8);
+    padding: 6px 0px;
+    text-align: center;
+}
+
+.grid-container4 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 10px;
+    grid-gap: 5px;
+}
+
+.grid-itemd {
+    border: 1px solid rgba(190, 190, 190, 0.8);
+    padding: 6px 0px;
+    text-align: center;
+}
+
+/* ============> **Tag Section End ** <============ */
+/* ============> **Footer Section Start ** <============ */
+#footer {
+    background-color: #283E4B;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer ul li a:hover {
+    color: #19BEB9;
+}
+
+#footer .social-media i {
+    color: white;
+    font-size: 16px;
+    padding: 12px 12px;
+    border-top: 2px solid rgb(88, 145, 175);
+    border-bottom: 2px solid rgb(88, 145, 175);
+    border-radius: 50%;
+}
+
+#footer ul li {
+    padding-bottom: 3px;
+}
+
+#footer .social-media i:hover {
+    background-color: #19beb9;
+    border-top: 2px solid #2e4a5a;
+    border-bottom: 2px solid #2e4a5a;
+    text-decoration: none;
+}
+
+#footer .social-media a:hover {
+    text-decoration: none;
+}
+
+#footer .social-link a {
+    text-decoration: none;
+}
+
+/* ============> **Footer Section End ** <============ */
+
+/* ============> **About_us $ blog.html  Start ** <============ */
+#about-us-head {
+    background-color: #009b97;
+}
+
+#about-us-head .watch-button a {
+    background-color: #283e4b;
+    border: 2px solid rgb(37, 207, 202);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#about-us-head .watch-button a:hover {
+    background-color: #007571;
+    color: #ffffff;
+    border: 2px solid #009b97;
+    transition: 0.5s;
+}
+
+#blog ul li a {
+    color: black;
+}
+
+.blog_category a {
+    color: rgb(0, 0, 0);
+    /* text-decoration: none; */
+}
+
+.blog_category p {
+    color: black;
+}
+
+/* ============> **About_us $ blog.html End ** <============ */
+/* ============> **faq.html Start ** <============ */
+#faq .card-header i {
+    border: 2px solid #19beb9;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-right: 15px;
+    padding: 6px 7px;
+    color: #19beb9;
+}
+
+.card-header {
+    border: 1px solid #19beb9;
+}
+
+.card-header a {
+    text-decoration: none;
+    color: #19beb9;
+}
+
+.card-body {
+    border: 1px solid #19beb9;
+}
+
+.card a {
+    color: #007bff;
+    /* text-decoration: none; */
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: black;
+}
+
+.card-link+.card-link {
+    margin-left: 0px;
+}
+
+#faq-button a {
+    text-decoration: none;
+    background-color: #009b97;
+    color: white;
+}
+
+#faq-button a:hover {
+    background-color: #007571;
+    color: white;
+}
+
+/* ============> **faq.html End ** <============ */
+
+/* ============> **blog_category.html Start ** <============ */
+.custom-b {
+    background-color: #009b97;
+    color: white;
+}
+
+.custom-b:hover {
+    background-color: #007571;
+    color: white;
+}
+
+.column {
+    float: left;
+    display: none;
+    /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+/* .btn {
+border: none;
+outline: none;
+padding: 12px 16px;
+background-color: white;
+cursor: pointer;
+}
+
+.btn:hover {
+background-color: #ddd;
+}
+
+*/
+.btn.active {
+    background-color: #007571;
+    color: white;
+}
+
+/* .content p{
+background: #283E4B;
+height: 40px;
+margin-bottom: 0px;
+} */
+/* .list-group-item {
+
+  margin-bottom: 0px
+
+} */
+.content img {
+    width: 100%;
+}
+
+/* ============> **blog_category.html Start ** <============ */
+
+/* ============> ** contact.html Start ** <============ */
+textarea {
+    margin: 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#office_location .head i {
+    font-size: 50px;
+    color: #19BEB9;
+    border: 3px solid #19BEB9;
+    border-radius: 50%;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+#office_location .body a {
+    text-decoration: none;
+    color: black;
+}
+
+#office_location .body i {
+    font-size: 20px;
+}
+
+#contact_us .varification i {
+    font-size: 35px;
+}
+
+#contact_us .varification a {
+    color: #009b97;
+    text-decoration: none;
+}
+
+/* ============> ** contact.html End ** <============ */
+/* ============> ** pricing.html start ** <============ */
+#pricing_head .content .div {
+    background-color: #009b97;
+}
+
+#pricing_body .list-group-item {
+    margin-bottom: 0px;
+}
+
+/* ============> ** pricing.html End ** <============ */
+
+/* ============> ** sample.html start ** <============ */
+#sample_card {
+    background-color: #19beb9;
+    color: white;
+}
+
+#sample_card i {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+/* ============> ** sample.html End ** <============ */
+
+/* ============> ** about_us.html Start ** <============ */
+#about_us_bg {
+    background-image: url("../images/about/designercountry_team.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 70vh;
+    z-index: -5;
+}
+
+#about_bg_overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+}
+
+.about-title {
+    padding-top: 300px;
+}
+
+#about_worker img {
+    border-radius: 50%;
+}
+
+#about_worker .follow_me i {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 12px 12px;
+    border-bottom: 2px solid #19BEB9;
+    border-radius: 50%;
+}
+
+#about_worker .follow_me i:hover {
+    background-color: #283E4B;
+    color: white;
+    border-bottom: 2px solid rgb(153, 154, 155);
+}
+
+#about_worker .follow-social-link a {
+    text-decoration: none;
+}
+
+.follow_me i {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 12px 12px;
+    border-bottom: 2px solid rgb(153, 154, 155);
+    border-radius: 50%;
+}
+
+.follow_me i:hover {
+    background-color: #cec9c9;
+    color: white;
+    border-bottom: 2px solid rgb(153, 154, 155);
+}
+
+.follow-social-link a {
+    text-decoration: none;
+}
+
+/* ============> ** about_us.html End ** <============ */
+/* ============> ** file_upload.html Start ** <============ */
+#file_upload_message {
+    background-color: #009b97;
+    color: white;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
+/* ============> ** file_upload.html End ** <============ */
+.account-section .dropdown-menu .show {
+    width: 170px;
+    margin-left: -95px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: #283E4B;
+    color: white;
+}
+
+/* .img-fluid{
+    width: 100%;
+} */
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 12px);
+}
