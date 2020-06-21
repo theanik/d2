@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Quote;
 use App\Mail\QuoteMail;
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Mail;
 
 class QuoteController extends Controller
@@ -50,6 +51,7 @@ class QuoteController extends Controller
             $data = Quote::create($req->all());
             Mail::to('azharraihan6969@gmail.com')->send(new QuoteMail($data));
             session(['name' => $data->name]);
+            Toastr::success('Your Data Update Successfully','success');
             return redirect()->route('get.quote.upload');
         }else{
             $data = [
@@ -59,6 +61,7 @@ class QuoteController extends Controller
                 'quantity' => $req->quantity,
                 'details_instraction' => $req->details_instraction
             ];
+            Toastr::warning('Please Select Atleast One Service','warning');
             return redirect()->back()->with($data);
         }
 

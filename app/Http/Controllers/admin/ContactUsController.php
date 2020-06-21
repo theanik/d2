@@ -4,9 +4,10 @@ namespace App\Http\Controllers\admin;
 use Redirect;
 use Response;
 use App\Models\ContactUs;
+use App\Mail\ContactUsMail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Mail\ContactUsMail;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Mail;
 
 class ContactUsController extends Controller
@@ -44,6 +45,7 @@ class ContactUsController extends Controller
         // });
         Mail::to('azharraihan6969@gmail.com')->send(new ContactUsMail($data));
         ContactUs::create($request->all());
+        Toastr::success('Your Message Send Successfully','success');
         return redirect()->back()->with('success', 'message has been sent');
     }
 

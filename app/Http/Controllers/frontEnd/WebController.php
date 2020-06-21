@@ -9,6 +9,7 @@ use App\Quote;
 class WebController extends Controller
 {
     public function index(){
+        // session()->flush();
         return view('frontEnd.pages.index');
     }
     public function aboutUs(){

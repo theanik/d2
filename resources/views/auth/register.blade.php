@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Create An Account ON Designer Country</title>
   <!--==** Logo **==-->
   <link rel="icon" href="{{asset('assets/frontEnd/images/home_page/Dc_Logo.png')}}" type="image/x-icon">
@@ -24,6 +25,11 @@
   <link rel="stylesheet" href="{{asset('assets/frontEnd/css/responsive.css')}}">
   <link rel="stylesheet" href="{{asset('assets/backEnd/css/main.css')}}">
 
+   {!! htmlScriptTagJsApi([
+            'action' => 'homepage',
+      ]) !!}
+      {{-- <script src="https://www.google.com/recaptcha/api.js"></script> --}}
+      
   <style>
     .login-content .login-box {
     min-width: 350px;
@@ -73,6 +79,9 @@
           <label for="password-confirm" class="control-label">Confirm Password</label>
           <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" >
         </div>
+        <div class="g-recaptcha" 
+           data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}">
+        </div>
         <div class="form-group btn-container">
           <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-sign-in-alt"></i>
             CREATE ACCOUNT
@@ -81,6 +90,7 @@
       </form>
     </div>
   </section>
+  {!! Toastr::message() !!}
   <!--==*** Script  Link **==-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">

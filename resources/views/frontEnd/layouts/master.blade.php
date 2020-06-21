@@ -55,6 +55,7 @@
   <!--==** Css Link **==-->
   <link rel="stylesheet" href="{{asset('assets/frontEnd/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('assets/frontEnd/css/responsive.css')}}">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
   @yield ('css')
   <style>
     .error{
@@ -206,7 +207,11 @@
     </div>
   </div>
   </section>
+  
   <!--==** Footer Section Start **==-->
+  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
   <!--==*** MenuBar Scrip Link **==-->
   <script>
     const $dropdown = $(".dropdown");

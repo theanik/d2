@@ -31,11 +31,7 @@ Route::get('color-correction', 'frontEnd\WebController@colorCorrection')->name('
 Route::get('vector-conversion', 'frontEnd\WebController@vectorConversion')->name('vector.conversion');
 /*====----====* Service Route End *====----====*/
 
-/*====----====* Blog Route Start *====----====*/
-Route::get('blog', 'frontEnd\WebController@blog')->name('blog');
-Route::get('blog-category', 'frontEnd\WebController@blogCategory')->name('blog.category');
-Route::get('ecommerce-trend', 'frontEnd\WebController@ecommerceTrend')->name('ecommerce.trend');
-/*====----====* Blog Route End *====----====*/
+
 
 
 Route::get('/', 'frontEnd\WebController@index')->name('index');
@@ -58,6 +54,14 @@ Route::get('contact', 'admin\ContactUsController@index')->name('contact');
 Route::post('contact-send', 'admin\ContactUsController@send')->name('contact.send');
 Route::post('store-quote', 'QuoteController@storeQuote')->name('store.quote');
 Route::get('get-quote-upload', 'frontEnd\WebController@getQuoteUpload')->name('get.quote.upload');
+
+/*====----====* Blog Route Start *====----====*/
+Route::get('blog', 'BlogController@index')->name('blog');
+Route::get('blog/{slug}', 'BlogController@show');
+// Route::get('blog-category', 'frontEnd\WebController@blogCategory')->name('blog.category');
+// Route::get('ecommerce-trend', 'frontEnd\WebController@ecommerceTrend')->name('ecommerce.trend');
+/*====----====* Blog Route End *====----====*/
+
 
 
 Route::group(['middleware'=>['auth']], function () {
